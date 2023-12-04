@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>burung</title>
+  <title></title>
   
   <link href="css/bootstrap.css" rel="stylesheet" />
   
@@ -17,80 +17,46 @@
 </head>
 
 <body>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <nav class="navbar  bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill"></i></a>
+        <a class="nav-link" href="#"><i class="bi bi-basket2"></i></a>
+        <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
+        <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i></a>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </nav>
+ 
+  
   <div id="panggung" class="d-flex justify-content-center align-items-center">
     <img id="objek" src="gambar/kanan-1.png">
   </div>
 
 <div class="d-flex justify-content-center">
-    <div class="btn btn-primary m-2" id="tombol-kiri">gerak ke kiri</div>
-    <div class="btn btn-primary m-2" id="tombol-kanan">gerak ke kanan</div>
+    <div class="btn btn-primary m-2" id="tombol-kiri">read more</div>
+   
 </div>
 
 <script src="jquery.js"></script>
-<script>
-  var langkahkanan = 1;
-  var langkahkiri = 1;
-  var posisibackground = 1;
-  var jumlahlangkah = 4;
-  
-  var interval;
-  
-  $(document).ready(function (){
-    $("#tombol-kanan").on("touchstart", function () {
-      interval = setInterval( () => {
-        langkahkanan++;
-      posisibackground = posisibackground - 8;
-      if (langkahkanan == jumlahlangkah) {
-        langkahkanan = 1;
-      }
-      $("#objek").attr("src", "gambar/kanan-" + langkahkanan + ".png");
-      $("#panggung").css("background-position-x", posisibackground);
-      }, 100 );
-    })
-    
-    $("#tombol-kanan").on("touchend", function () {
-      clearInterval(interval);
-    })
-    
-    $("#tombol-kiri").on("touchstart", function () {
-      interval = setInterval( () => {
-        langkahkiri++;
-      posisibackground = posisibackground + 8;
-      if (langkahkiri == jumlahlangkah) {
-        langkahkiri = 1;
-      }
-      $("#objek").attr("src", "gambar/kiri-" +
-      langkahkiri + ".png");
-      $("#panggung").css("background-position-x", posisibackground);
-      }, 100 );
-    })
-    
-    $("#tombol-kiri").on("touchend", function () {
-      clearInterval(interval);
-    })
-    
-    $("#tombol-kanan").click(function () {
-      langkahkanan++;
-      posisibackground = posisibackground - 8;
-      if (langkahkanan == jumlahlangkah) {
-        langkahkanan = 1;
-      }
-      $("#objek").attr("src", "gambar/kanan-" + langkahkanan + ".png");
-      $("#panggung").css("background-position-x", posisibackground);
-    })
-    
-    $("#tombol-kiri").click(function () {
-      langkahkiri++;
-      posisibackground = posisibackground + 8;
-      if (langkahkiri == jumlahlangkah) {
-        langkahkiri = 1;
-      }
-      $("#objek").attr("src", "gambar/kiri-" +
-      langkahkiri + ".png");
-      $("#panggung").css("background-position-x", posisibackground);
-    })
-  })
-</script>
+  <h1>nama: abdul Rojak</h1>
+<h1>tempat tinggal lahir: bogor-14 mei 20007</h1>
+
+     <footer class="py-3 bg-dark-subtle mt-auoto">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/stondibrahim204/index.html" class="nav-link px-2 text-body-secondary">Beranda</a></li>
+
+        <li class="nav-item"><a href="stondibrahim204/tentang.html" class="nav-link px-2 text-body-secondary">tentang</a></li>
+
+      </ul>
+      <p class="text-center text-body-secondary">&copy; social media</p>
+    </footer>
+
 </body>
 
 </html>
